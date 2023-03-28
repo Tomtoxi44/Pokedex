@@ -1,18 +1,25 @@
 import colorCard from './PokemonCard.module.css'
 
 
+{/* <figure className={colorCard.plante}>
+<img src={pokemon.imgSrc}
+alt={pok}
+className={colorCard.cardImg} />
+<figcaption>bulbasaur</figcaption>
+</figure> */}
+
+
+// className={colorCard.plante}
+
 const pokemonCard = () => {
-    return <figure className={colorCard.plante}>
-        <img src={pokemon.imgSrc}
-            alt={pok}
-            className={colorCard.cardImg} />
+
+    const pokemon = pokemonList[0]
+
+    return <figure className={colorCard.plante} >
+        <p>{pokemon.name === "mew" ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={colorCard.cardImg} />}</p>
         <figcaption>bulbasaur</figcaption>
     </figure>
 }
-
-
-
-
 
 
 const pokemonList = [
@@ -25,6 +32,4 @@ const pokemonList = [
     }
 ]
 
-PokemonCard(pokemonList[0])
-
-export default pokeCard;
+export default pokemonCard;
