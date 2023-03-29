@@ -1,4 +1,4 @@
-import colorCard from './PokemonCard.module.css'
+import ColorCard from './PokemonCard.module.css'
 
 
 {/* <figure className={colorCard.plante}>
@@ -11,25 +11,13 @@ className={colorCard.cardImg} />
 
 // className={colorCard.plante}
 
-const pokemonCard = () => {
+const PokemonCard = ({ Pokemon }) => {
+    console.log("Ceci est ma props pokemonList", Pokemon);
+    const pokemon = Pokemon
 
-    const pokemon = pokemonList[0]
-
-    return <figure className={colorCard.plante} >
-        <p>{pokemon.name === "mew" ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={colorCard.cardImg} />}</p>
+    return <figure className={ColorCard.plante} >
+        <p>{pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={ColorCard.cardImg} />}</p>
         <figcaption>{pokemon.name}</figcaption>
     </figure>
 }
-
-
-const pokemonList = [
-    {
-        name: "bulbasaur",
-        imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-        name: "mew",
-    }
-] 
-
-export default pokemonCard;
+export default PokemonCard;
