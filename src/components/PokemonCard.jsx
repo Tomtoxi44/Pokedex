@@ -17,7 +17,7 @@ const pokemonCard = () => {
 
     return <figure className={colorCard.plante} >
         <p>{pokemon.name === "mew" ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={colorCard.cardImg} />}</p>
-        <figcaption>bulbasaur</figcaption>
+        <figcaption>{pokemon.name}</figcaption>
     </figure>
 }
 
@@ -30,6 +30,6 @@ const pokemonList = [
     {
         name: "mew",
     }
-]
+] 
 
 export default pokemonCard;
