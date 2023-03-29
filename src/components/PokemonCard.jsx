@@ -11,9 +11,8 @@ className={colorCard.cardImg} />
 
 // className={colorCard.plante}
 
-const PokemonCard = ({ Pokemon }) => {
-    console.log("Ceci est ma props pokemonList", Pokemon);
-    const pokemon = Pokemon
+const PokemonCard = ({ pokemon }) => {
+
 
     return <figure className={ColorCard.plante} >
         <p>{pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={ColorCard.cardImg} />}</p>
