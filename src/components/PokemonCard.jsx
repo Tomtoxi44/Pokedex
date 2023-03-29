@@ -1,5 +1,5 @@
 import ColorCard from './PokemonCard.module.css'
-
+import PropTypes from 'prop-types'
 
 {/* <figure className={colorCard.plante}>
 <img src={pokemon.imgSrc}
@@ -11,6 +11,11 @@ className={colorCard.cardImg} />
 
 // className={colorCard.plante}
 
+
+
+
+
+
 const PokemonCard = ({ pokemon }) => {
 
 
@@ -19,4 +24,21 @@ const PokemonCard = ({ pokemon }) => {
         <figcaption>{pokemon.name}</figcaption>
     </figure>
 }
+
+
+PokemonCard.propTypes = {
+    pokemon: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        imgSrc: PropTypes.string,
+    })
+}
+
+
+
+
+
+
+
+
+
 export default PokemonCard;
