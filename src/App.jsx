@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import MyTitle from "./components/MyTitle"
 import PokemonCard from "./components/PokemonCard"
 import NavBar from "./components/NavBar"
+
 
 function App() {
   const PokemonList = [
@@ -45,6 +46,13 @@ function App() {
   ]
 
 
+  useEffect(
+    () => {
+      alert("hello pokemon trainer")
+    },
+    []
+  )
+
   const [pokemonIndex, setpokemonIndex] = useState(0);
 
   const handleSuivant = () => {
@@ -59,7 +67,6 @@ function App() {
     <div>
       <NavBar suivant={handleSuivant} precedent={handlePrecedent} index={pokemonIndex} />
       <PokemonCard pokemon={PokemonList[pokemonIndex]} />
-
     </div>
 
   );
