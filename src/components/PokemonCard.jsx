@@ -17,9 +17,9 @@ className={colorCard.cardImg} />
 
 
 const PokemonCard = ({ pokemon }) => {
+    const type = pokemon.type
 
-
-    return <figure className={ColorCard.plante} >
+    return <figure className = {ColorCard.plante} >
         <p>{pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc} alt="" className={ColorCard.cardImg} />}</p>
         <figcaption>{pokemon.name}</figcaption>
     </figure>

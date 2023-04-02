@@ -1,0 +1,8 @@
+.selecteur {
+    margin-bottom: 3%;
+}
+
+.suivant {
+    display: flex;
+    justify-content: space-around;
+}
