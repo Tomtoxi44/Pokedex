@@ -8,7 +8,7 @@ const NavBar = ({ index, suivant, precedent, pokemon,setpokemonIndex,pokemonInde
     return (
         <nav>
         <div className={nav.selecteur}>
-            { pokemon.map((poke) => {return <button key={poke.name} onClick={() => handleClick(poke)}>{poke.name}</button> })}
+            { pokemon.map((poke,i) => {return <button key={i} onClick={() => handleClick(poke)}>{poke.name}</button> })}
         </div>
             <div className={nav.suivant}>
             {index > 0 ? <button onClick={precedent}>Précedent</button> : undefined}
